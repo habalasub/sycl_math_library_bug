@@ -10,4 +10,4 @@ Steps to reproduce the error:
 where $INPUT is the number of elements to be tested on.
 
 Note:
-The code can be run with both floats and doubles by manually changing the values of 'real_t' in the code. 
+The code can be run with both floats and doubles by manually changing the value of 'real_t' in the code. 
