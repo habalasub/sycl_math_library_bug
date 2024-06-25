@@ -73,7 +73,7 @@ void power(size_t len, sycl::queue& queue)
                 max_diff_sycl);
             max_diff_std = std::max(
                 std::abs(sycl_results[i] - std::pow(original_values[i], static_cast<real_t>(2.0))),
-                max_diff_sycl);
+                max_diff_std);
             //real_t r = std::pow(original_values[i], 2.0);
 	        //long n1, n2;
 	        //std::memcpy(&n1, &r, sizeof(real_t));
@@ -129,7 +129,7 @@ void exponent(size_t len, sycl::queue& queue)
                 max_diff_sycl);
             max_diff_std = std::max(
                 std::abs(sycl_results[i] - std::exp(original_values[i])),
-                max_diff_sycl);
+                max_diff_std);
             //real_t r = std::pow(original_values[i], 2.0);
 	        //long n1, n2;
 	        //std::memcpy(&n1, &r, sizeof(real_t));
