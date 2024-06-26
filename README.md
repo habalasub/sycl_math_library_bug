@@ -5,11 +5,13 @@ Steps to reproduce the error:
 2. Run the code (example below): The code was run on a CPU using the following flags since the purpose is precision, not performance.
 
    icpx -fsycl -fp-model=precise -O0 power.cpp -o power
+   
    ./power $INPUT
 
-3. This can also be tested on (nvidia) GPUs and notice differences. An example command is given below
+4. This can also be tested on (nvidia) GPUs and notice differences. An example command is given below
 
    icpx -fsycl -fp-model=precise -fsycl-targets=nvptx64-nvidia-cuda,spir64  -O0 power.cpp -o power
+   
    ONEAPI_DEVICE_SELECTOR="ext_oneapi_cuda:*" ./power $INPUT
 
 where $INPUT is the number of elements to be tested on.
